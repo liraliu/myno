@@ -48,11 +48,11 @@ export default function Home({ session }) {
         <div className="max-w-6xl mx-auto text-center">
           <div className="animate-fade-in mb-8">
             <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-8 leading-tight">
-              Your AI Copilot for
+              Grow Your Startup.
               <br />
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-turquoise-400 via-turquoise-500 to-turquoise-600 bg-clip-text text-transparent animate-shimmer bg-300% animate-glow">
-                  Reddit & Discord Growth
+                  10x Your Users. 10x Your Revenue.
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-turquoise-400/20 to-turquoise-600/20 blur-lg animate-pulse-slow"></div>
               </span>
@@ -61,7 +61,7 @@ export default function Home({ session }) {
 
           <div className="animate-slide-up mb-12">
             <p className="text-xl md:text-3xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
-              Find the best communities. Get viral post drafts. Grow your startup.
+              Organic marketing. Powered by AI.
             </p>
           </div>
 
@@ -78,7 +78,6 @@ export default function Home({ session }) {
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-10 mt-24 animate-fade-in">
             <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-in-left">
-              <div className="text-6xl mb-6 animate-float">🎯</div>
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Smart Targeting</h3>
               <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                 AI-powered community discovery to find your perfect audience on Reddit and Discord
@@ -86,7 +85,6 @@ export default function Home({ session }) {
             </div>
 
             <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <div className="text-6xl mb-6 animate-float" style={{animationDelay: '0.5s'}}>✨</div>
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Viral Content</h3>
               <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                 Generate engaging post drafts that resonate with your audience and drive growth
@@ -94,7 +92,6 @@ export default function Home({ session }) {
             </div>
 
             <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-in-right">
-              <div className="text-6xl mb-6 animate-float" style={{animationDelay: '1s'}}>🚀</div>
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Auto-Posting</h3>
               <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                 Schedule and automate your posts across multiple platforms (coming soon)
