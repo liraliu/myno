@@ -47,12 +47,16 @@ export default function Home({ session }) {
       <main className="relative z-10 px-8 py-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="animate-fade-in mb-8">
-            <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-8 leading-tight">
-              Grow Your Startup.
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-tight">
+              <span className="inline-block animate-slide-in-left">
+                Grow Your Startup.
+              </span>
               <br />
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-turquoise-400 via-turquoise-500 to-turquoise-600 bg-clip-text text-transparent animate-shimmer bg-300% animate-glow">
-                  10x Your Users. 10x Your Revenue.
+                <span className="bg-gradient-to-r from-turquoise-400 via-turquoise-500 to-turquoise-600 bg-clip-text text-transparent animate-shimmer bg-300% animate-glow inline-block">
+                  <span className="inline-block animate-flicker" style={{animationDelay: '0.2s'}}>10x Your Users.</span>
+                  <br />
+                  <span className="inline-block animate-flicker" style={{animationDelay: '0.4s'}}>10x Your Revenue.</span>
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-turquoise-400/20 to-turquoise-600/20 blur-lg animate-pulse-slow"></div>
               </span>
@@ -76,30 +80,60 @@ export default function Home({ session }) {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-10 mt-24 animate-fade-in">
-            <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-in-left">
+          <div className="max-w-2xl mx-auto mt-32 mb-16 animate-fade-in">
+            <div className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-10 hover:bg-gray-800/90 transition-all duration-500 transform hover:scale-[1.02] border border-gray-700/50 hover:border-turquoise-500/30 animate-slide-in-left mb-16">
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Smart Targeting</h3>
-              <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                AI-powered community discovery to find your perfect audience on Reddit and Discord
+              <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors duration-300 max-w-lg mx-auto">
+                AI-powered community discovery to find your perfect audience on Reddit and Discord. Our advanced algorithms analyze engagement patterns to identify the most promising communities for your startup.
               </p>
             </div>
 
-            <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-up" style={{animationDelay: '0.2s'}}>
+            <div className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-10 hover:bg-gray-800/90 transition-all duration-500 transform hover:scale-[1.02] border border-gray-700/50 hover:border-turquoise-500/30 animate-slide-up mb-16" style={{animationDelay: '0.2s'}}>
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Viral Content</h3>
-              <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                Generate engaging post drafts that resonate with your audience and drive growth
+              <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors duration-300 max-w-lg mx-auto">
+                Generate engaging post drafts that resonate with your audience and drive growth. Our AI analyzes successful content patterns to help you create posts that are more likely to go viral.
               </p>
             </div>
 
-            <div className="group bg-gray-900/50 backdrop-blur-md rounded-3xl p-10 hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 border border-gray-800 hover:border-turquoise-500/30 animate-slide-in-right">
+            <div className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-10 hover:bg-gray-800/90 transition-all duration-500 transform hover:scale-[1.02] border border-gray-700/50 hover:border-turquoise-500/30 animate-slide-in-right">
               <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-turquoise-400 transition-colors duration-300">Auto-Posting</h3>
-              <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                Schedule and automate your posts across multiple platforms (coming soon)
+              <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-200 transition-colors duration-300 max-w-lg mx-auto">
+                Schedule and automate your posts across multiple platforms (coming soon). Save time and maintain consistent engagement with our intelligent posting system.
               </p>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Bottom CTA Section */}
+      <div className="relative z-10 px-8 pt-8 pb-12 text-center">
+        <div className="max-w-6xl mx-auto">
+          <div className="animate-fade-in mb-8">
+            <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+              <span className="inline-block animate-slide-in-left">
+                Grow Your Startup.
+              </span>
+              <br />
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-turquoise-400 via-turquoise-500 to-turquoise-600 bg-clip-text text-transparent animate-shimmer bg-300% animate-glow inline-block">
+                  It's Now or Never.
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-turquoise-400/20 to-turquoise-600/20 blur-lg animate-pulse-slow"></div>
+              </span>
+            </h2>
+          </div>
+
+          <div className="animate-slide-up">
+            <button
+              onClick={() => setShowAuth(true)}
+              className="group relative bg-gradient-to-r from-turquoise-500 to-turquoise-600 text-black text-2xl font-bold py-6 px-16 rounded-2xl hover:from-turquoise-400 hover:to-turquoise-500 transform hover:scale-110 transition-all duration-500 shadow-2xl animate-glow"
+            >
+              <span className="relative z-10">Sign Up Now</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-turquoise-400 to-turquoise-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="relative z-10 px-8 py-12 text-center animate-fade-in">
