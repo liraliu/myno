@@ -61,8 +61,7 @@ export default function Home({ session }) {
 
           <div className="animate-slide-up mb-12">
             <p className="text-xl md:text-3xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
-              Find the best communities. Get viral post drafts. Grow your startup — 
-              <span className="text-turquoise-400 font-medium"> all without sounding spammy.</span>
+              Find the best communities. Get viral post drafts. Grow your startup.
             </p>
           </div>
 
