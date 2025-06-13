@@ -1,53 +1,41 @@
-// components/AuthForm.js
-import { useState } from 'react'
-import { supabase } from '../lib/supabase'
-import { useRouter } from 'next/router'
+import { useState, FormEvent } from "react";
+import { useRouter } from "next/router";
 
 export default function AuthForm() {
-  const [isLogin, setIsLogin] = useState(true)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-  const router = useRouter()
+  const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
     try {
-      if (isLogin) {
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        })
-        if (error) throw error
-        router.push('/dashboard')
-      } else {
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password,
-        })
-        if (error) throw error
-        router.push('/dashboard')
-      }
+      // TODO: Implement authentication logic
+      console.log("Authentication to be implemented");
+      router.push("/dashboard");
     } catch (error) {
-      setError(error.message)
+      setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="max-w-md w-full bg-gray-900 rounded-3xl shadow-2xl p-10 animate-slide-up border border-gray-800 backdrop-blur-sm">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-white mb-3 animate-fade-in">
-            {isLogin ? 'Welcome Back' : 'Join Myno'}
+            {isLogin ? "Welcome Back" : "Join Myno"}
           </h2>
           <p className="text-gray-400 text-lg animate-fade-in">
-            {isLogin ? 'Sign in to your account' : 'Create your account to get started'}
+            {isLogin
+              ? "Sign in to your account"
+              : "Create your account to get started"}
           </p>
         </div>
 
@@ -91,7 +79,7 @@ export default function AuthForm() {
             disabled={loading}
             className="w-full bg-gradient-to-r from-turquoise-500 to-turquoise-600 text-black py-4 px-6 rounded-xl font-bold text-lg hover:from-turquoise-400 hover:to-turquoise-500 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed animate-glow"
           >
-            {loading ? 'Processing...' : (isLogin ? 'Sign In' : 'Create Account')}
+            {loading ? "Processing..." : isLogin ? "Sign In" : "Create Account"}
           </button>
         </form>
 
@@ -100,10 +88,12 @@ export default function AuthForm() {
             onClick={() => setIsLogin(!isLogin)}
             className="text-turquoise-400 hover:text-turquoise-300 font-medium transition-colors duration-300"
           >
-            {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
+            {isLogin
+              ? "Don't have an account? Sign up"
+              : "Already have an account? Sign in"}
           </button>
         </div>
       </div>
     </div>
-  )
+  );
 }
